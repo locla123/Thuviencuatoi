@@ -1,0 +1,153 @@
+:root {
+    --width: 80%;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* CSS header */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background-color: rgba(172, 243, 172, 0.5);
+}
+
+header > div {
+    padding: 10px;
+}
+
+div.flex img {
+    margin-right: 10px;
+    height: 200px;
+}
+
+
+.ads > div {
+    background-color: lightblue;
+    border: 1px dashed darkblue;
+    margin: 5px;
+    padding: 4.5rem 20px;
+}
+div > input {
+    height: var(--width);
+    width: calc(100%-var(--width));
+}
+div > a {
+    margin-right: 10px;
+}
+
+/* CSS menu */
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+ul.menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+ul.menu.special> li {
+    padding: 0;
+    margin-right: 0;
+    border-right: 1px solid darkblue;
+}
+
+ul.menu.special> li:last-child {
+    border: none;
+}
+
+ul.menu > li > a {
+    min-width: 100px;
+    display: block;
+    padding: 1rem 1.5rem;
+    color: darkblue;
+    text-decoration: none;
+}
+ul.menu > li > a:hover {
+    background: darkblue;
+    color: white;
+}
+/* CSS section */
+section.right {
+    background-color: rgba(37, 70, 37, 0.5);
+    width: var(--width);
+}
+/* CSS MENU LEFT */
+section.left {
+    border-right: 3px solid white;
+    background-color: rgba(159, 197, 159, 0.5);
+    width: calc(100% - var(--width));
+}
+
+.content {
+    overflow: visible;
+    display: flex;
+}
+
+section.left > h1 {
+    text-align: center;
+}
+
+section.left > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+section.left > ul > li > a {
+    text-decoration: none;
+}
+
+.v-menu {
+    flex-direction: column !important;
+}
+/* CSS SECTION RIGHT */
+
+div.books {
+    display: flex;
+}
+
+div.books > div.book > img {
+    width: 100%;
+}
+div.books > div.book > img:hover {
+    transform: scale(0.9);
+    transition: transform 1s;
+}
+
+div.books > div.book {
+    border: 5px solid;
+    padding: 10px;
+    width: 25%;
+}
+/* CSS footer */
+@keyframes move {
+    from {
+        left: 0;
+    } to {
+        left: 100%;
+    }
+}
+
+footer {
+    overflow: hidden;
+    background-color: lightcoral;
+    color: darkblue;
+    font-weight: 700;
+    padding: 0;
+}
+footer > span {
+    margin: 0;
+    padding: 1rem;
+    display: block;
+    position: relative;
+    animation: move 8s infinite;
+}
